@@ -1,0 +1,30 @@
+.btt{
+    margin-right: 20px;
+}
+.btn-secondary{
+    background: #FDB137;
+    border-radius: 50px;
+}
+.btn-secondarys{
+    background: #F9F8F3;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+
+.logo{
+
+width: 160px;
+height: 47px;
+background:white;
+margin-top: -6px;
+
+}
+.navbor{
+    border-radius: 50px;
+}
+.nav-item .active:hover{
+    background-color: #FDB137;
+}
+.nav-item .hom:hover{
+    background-color: #FDB137;
+}
