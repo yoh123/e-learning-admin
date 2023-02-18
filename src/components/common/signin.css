@@ -1,0 +1,119 @@
+.signin{
+    background-color: #F9F8F3;
+}
+.signinpassword{
+    
+    border: 1px solid white;
+    background-color: white;
+    height: 50px;
+}
+.signinemail{
+    border: 1px solid white;
+    background-color: white;
+    height: 50px;
+    
+}
+.signinform{
+    width: 300px;
+    margin-left: 650px;
+    margin-top: 80px;
+    border: 1px solid #E6F0f0;
+}
+.signinbtn{
+    background-color: #FdB137;
+    border: #F9F8F3;
+    width: 300px;
+     border-radius: 7px;
+     margin-top: 30px;
+     height: 40px;
+     color: white;
+     
+}
+.signina{
+    color: #FdB137;
+    margin-left: 193px;
+    margin-top: 70px;
+    text-decoration: underline;
+}
+.signinp{
+    color: black;
+}
+.signinp2{
+    color: black;
+     border: 1px solid #E6F0f0;
+     background-color: #E6F0f0;
+     width: 300px;
+     margin-left: -1px;
+}
+.signinh{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+
+
+
+
+.upload{
+    width: 350px;
+    margin-left: 440px;
+    border: 1px solid #E6F0f0;
+    background-color: #F9F8F3;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+.uploadform{
+    margin-top: 30px;
+  
+}
+.courseinput{
+    border: 1px solid #E6F0f0;
+    background-color: white;
+    width: 340px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 8px;
+}
+.courselabel{
+    margin-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+}
+.catagorylabel{
+    margin-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 20px;
+
+}
+.levellabel{
+    margin-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+  
+}
+.catagoryinput{
+    width: 340px;
+    height: 60px;
+    border: #E6F0f0;
+    margin-left: 3px;
+    margin-top: 10px;
+    
+}
+.signinbtns{
+    background-color: #FdB137;
+    border: #F9F8F3;
+    width: 348px;
+     border-radius: 7px;
+     margin-top: 30px;
+     height: 40px;
+     color: white;
+     margin-left: 1px;
+     font-family: 'Courier New', Courier, monospace;
+     font-size: larger;
+     font-weight: bolder;
+     
+}

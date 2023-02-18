@@ -3,7 +3,7 @@ import Logo from './logo2.png';
 import { Anchor } from 'antd';
 import { GrHomeRounded } from "react-icons/gr";
  import {RiLiveLine } from "react-icons/ri";
-import Nav from '../../Nav';
+
 import { MdDashboard,
   MdClass,
   MdManageAccounts,
@@ -27,7 +27,7 @@ import TeContents from './Teachercontent';
 import { Link,Route,Routes } from 'react-router-dom';
 import Home from '../home/Home';
 import Teacher from './Teacher';
-import Teacherinfo from '../../Teacherinfo';
+
 import TeCharts from './Techerchart';
 import { BsThreeDotsVertical} from "react-icons/bs";
 import { GoBook } from "react-icons/go";
@@ -52,8 +52,7 @@ const Teachers = () => {
   return (
     <div style={{ backgroundColor:'#2D4849' }}> <Routes>
    
-    <Route path='/Book' element={<Teacher/>}/>
-    <Route path='/Books' element={<Teacherinfo />}/>
+   
   
    </Routes>
     <Layout  >
@@ -70,7 +69,7 @@ const Teachers = () => {
         <div className="logo" style={{marginTop:10,backgroundColor:'#2D4849' }}>  <img style={{ backgroundColor:'#2D4849' }} src={Logo} className="adminlogo" alt="no image" /> </div>
         
         <Menu style={{backgroundColor:'#2D4849',height:600,color:'white' }}>
-        <Menu.Item > <Link to='/'><GrHomeRounded/> Dashboard</Link></Menu.Item>
+        <Menu.Item > <Link to='/dashboard'><GrHomeRounded/> Dashboard</Link></Menu.Item>
         <Menu.Item ><Link to={'/Mycourse'}><GoBook/> My Courses</Link></Menu.Item>
         <Menu.Item ><Link to={'/room'}><RiLiveLine/> Live Classes</Link></Menu.Item>
          <Menu.Item ><Link to={'/News'}><TfiAnnouncement/> Anouncement</Link></Menu.Item>

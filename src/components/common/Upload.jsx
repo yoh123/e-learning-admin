@@ -1,31 +1,42 @@
 import React from 'react';
-import { Card, Upload } from 'antd';
-import { Avatar, List } from 'antd';
-import { Button } from 'antd';
+import { Avatar } from 'antd';
 import Logo from './logo2.png';
-import Ux from './Ux.png'
-import Vec from './Vector1.png'
 import { IoIosNotificationsOutline} from "react-icons/io";
-import { Link,Route,Routes } from 'react-router-dom';
-import { MdDashboard,
-  MdClass,
-  MdManageAccounts,
-  MdLiveTv
- } from "react-icons/md";
- import { IoChatbubblesSharp,IoSettingsSharp,IoMdNotificationsOutline} from "react-icons/io5";
+import { Link } from 'react-router-dom';
+ import { IoSettingsSharp} from "react-icons/io5";
  import { Layout, Menu, theme } from 'antd';
  import { BsThreeDotsVertical} from "react-icons/bs";
  import { Col, Row } from 'antd';
  import { Input, Space } from 'antd';
  import { GoBook } from "react-icons/go";
 import { TfiAnnouncement } from "react-icons/tfi";
-
-import { RiArrowDropDownLine,RiQuestionAnswerLine,RiLogoutCircleRLine} from "react-icons/ri";
+import {RiQuestionAnswerLine,RiLogoutCircleRLine} from "react-icons/ri";
 import { GrHomeRounded } from "react-icons/gr";
  import {RiLiveLine } from "react-icons/ri";
  import { useState } from 'react';
  import { useNavigate } from 'react-router-dom';
- const { Header, Content, Footer, Sider } = Layout;
+ import './signin.css'
+ import { DownOutlined } from '@ant-design/icons';
+import { Dropdown, message ,  Select} from 'antd';
+const onClick = ({ key }) => {
+  message.info(`Click on item ${key}`);
+};
+const { Option } = Select;
+const items = [
+  {
+    label: '1st menu item',
+    key: '1',
+  },
+  {
+    label: '2nd menu item',
+    key: '2',
+  },
+  {
+    label: '3rd menu item',
+    key: '3',
+  },
+];
+ const { Content, Footer, Sider } = Layout;
 
   const onSearch = (value) => console.log(value);
   const { Search } = Input;
@@ -82,7 +93,7 @@ const creatpost=async(e)=>{
         <div className="logo" style={{marginTop:10,backgroundColor:'#2D4849' }}>  <img style={{ backgroundColor:'#2D4849' }} src={Logo} className="adminlogo" alt="no image" /> </div>
         
         <Menu style={{backgroundColor:'#2D4849',height:600,color:'white' }}>
-        <Menu.Item > <Link to='/'><GrHomeRounded/> Dashboard</Link></Menu.Item>
+        <Menu.Item > <Link to='/dashboard'><GrHomeRounded/> Dashboard</Link></Menu.Item>
         <Menu.Item ><Link to={'/Mycourse'}><GoBook/> My Courses</Link></Menu.Item>
         <Menu.Item ><Link to={'/room'}><RiLiveLine/> Live Classes</Link></Menu.Item>
          <Menu.Item ><Link to={'/Book'}><TfiAnnouncement/> Anouncement</Link></Menu.Item>
@@ -113,41 +124,45 @@ const creatpost=async(e)=>{
           }}
         > 
             <div className="upload" onSubmit={creatpost}>
-           <form action="">
-            <label>coursname</label>
-            <input type="text" 
+           <form className='uploadform' action="">
+            <label className='courselabel'>coursname</label>
+            <div className='courseinput'><input type="text" 
               onChange={(e)=>setcourseName(e.target.value)
               }
               value={courseName}
-            />
-            <label htmlFor="">Catagory</label>
-            <input type="dropdown" 
-              onChange={(e)=>setcatagory(e.target.value)
-              }
-              value={catagory}
-            />
-            <label htmlFor="">level</label>
-            <input type="dropdown" 
-              onChange={(e)=>setlevel(e.target.value)
-              }
-              value={level}
-            />
+            placeholder='coursname'/></div>
+            <label className='catagorylabel' htmlFor="">Catagory</label>
+            <div className='catagoryinput'> <Select style={{width:340}} defaultValue="" >
+        <Option  value="1">catagory1</Option>
+        <Option value="2">catagory2</Option>
+        <Option value="2">catagory3</Option>
+      </Select></div>
+            <label className='levellabel' htmlFor="">level</label>
+            <Select style={{width:340,marginLeft:5}} defaultValue="" >
+        <Option  value="1">level1</Option>
+        <Option value="2">level2</Option>
+        <Option value="2">level3</Option>
+      </Select>
 
-            <label htmlFor="">Description</label>
-            <input type="text" 
+            <label className='catagorylabel' htmlFor="">Description</label>
+            <div className='courseinput'> <input  type="text" 
               onChange={(e)=>setdescription(e.target.value)
               }
               value={description}
-            />
-            <label htmlFor="">Curriculum</label>
-            <input type="text" 
+            /></div>
+        
+      
+      <label className='catagorylabel' htmlFor="">Curriculum</label>
+      <div className='courseinput'> <input   type="text" 
               onChange={(e)=>setcurriculum(e.target.value)
               }
               value={curriculum}
-            />
-         
-            <button >upload</button>
+            /></div>
+     
+     
+            <button className="signinbtns" >upload</button>
             </form>
+        
             </div>
                 </Content>
     
