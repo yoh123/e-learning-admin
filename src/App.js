@@ -41,7 +41,7 @@ const App=()=>{
 <Routes>
  
 
-<Route exact  path='/signin' element={<Signin/>}/>
+<Route exact  path='/' element={<Signin/>}/>
 <Route exact  path='/dashboard' element={<Teachers/>}/>
 
 

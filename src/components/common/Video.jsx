@@ -17,7 +17,7 @@ import { MdDashboard,
  import { Layout, Menu, theme } from 'antd';
  import { BsThreeDotsVertical} from "react-icons/bs";
  import { Col, Row } from 'antd';
- import { Input, Space } from 'antd';
+ import { Input, Space,Select } from 'antd';
  import { GoBook } from "react-icons/go";
 import { TfiAnnouncement } from "react-icons/tfi";
 
@@ -25,7 +25,7 @@ import { RiArrowDropDownLine,RiQuestionAnswerLine,RiLogoutCircleRLine} from "rea
 import { GrHomeRounded } from "react-icons/gr";
  import {RiLiveLine } from "react-icons/ri";
  const { Header, Content, Footer, Sider } = Layout;
-
+ const { Option } = Select;
   const onSearch = (value) => console.log(value);
   const { Search } = Input;
    
@@ -81,19 +81,53 @@ const Videos = () => {
             margin: '24px 16px 0',
             backgroundColor:'white',
           }}
-        > 
+        >
+          
+            <Row>
+            <Col xs={23} sm={16} md={12} lg={8} xl={7}>
+            <div  className="divvideo">
+           <form className='videoform' action=''>
+            <label className='courselabel'>course</label>
+            <div className='selectr'><Select style={{width:340,marginLeft:4}} defaultValue="" >
+        <Option  value="1">catagory1</Option>
+        <Option value="2">catagory2</Option>
+        <Option value="2">catagory3</Option>
+      </Select></div>
+            <label className='labelvideoname' htmlFor="">video name</label>
+            <Select style={{width:340,marginLeft:4}} defaultValue="" >
+        <Option  value="1">catagory1</Option>
+        <Option value="2">catagory2</Option>
+        <Option value="2">catagory3</Option>
+      </Select>
+            <label className='labelduration' htmlFor="">duration</label>
+            <div className='durinput'><input className='inputdur' type="text" /></div>
+            <label className='labelvideo' htmlFor="">video</label>
+            <div className='divfile'> <input className='inputfile' type="file" /></div>
+            <button className='videopost'>Post</button>
             
-           
-            <label>course</label>
-            <input type="dropdown" />
-            <label htmlFor="">video name</label>
-            <input type="dropdown" />
-            <label htmlFor="">duration</label>
-            <input type="text" />
-            <label htmlFor="">video</label>
-            <input type="file" />
-            <button>Post</button>
-            <button onClick={handleclicks}>upload</button>
+            </form>
+            </div>
+            </Col>
+
+
+            <Col xs={23} sm={16} md={12} lg={8} xl={11}>
+            <div  className="divpdf">
+            <form>
+            <label className='courselabel'>course</label>
+            <div className='selectr'><Select style={{width:378,marginLeft:4}} defaultValue="" >
+        <Option  value="1">catagory1</Option>
+        <Option value="2">catagory2</Option>
+        <Option value="2">catagory3</Option>
+      </Select></div>
+            <label  className='labelduration' htmlFor="">pdfname</label>
+            <div className='durinputs'><input className='inputdur' type="text" /></div>
+            <label className='labelvideo' htmlFor="">pdf</label>
+           <div className='divfile'> <input type="file" /></div>
+            <button className='pdfpost'>Post</button>
+            </form>
+            </div>
+            </Col>
+            </Row>
                 </Content>
     
                 <Footer

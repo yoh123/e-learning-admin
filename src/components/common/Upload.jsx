@@ -21,6 +21,7 @@ import { Dropdown, message ,  Select} from 'antd';
 const onClick = ({ key }) => {
   message.info(`Click on item ${key}`);
 };
+
 const { Option } = Select;
 const items = [
   {
@@ -36,13 +37,21 @@ const items = [
     key: '3',
   },
 ];
+
+
  const { Content, Footer, Sider } = Layout;
 
   const onSearch = (value) => console.log(value);
   const { Search } = Input;
+  
+
    
 const Uploads = () => {
-  
+  const navigates=useNavigate();
+
+  function handleclicks(){
+    navigates('/video')
+  }
 const [courseName, setcourseName] = useState("");
 const [level, setlevel] = useState("");
 const [catagory, setcatagory] = useState("");
@@ -74,13 +83,12 @@ const creatpost=async(e)=>{
      setcurriculum('')
   navigate('/video')
   
-      
     }
 }
     return (
         <div className="site-card-border-less-wrapper">
             <Layout>
-      <Sider style={{  backgroundColor:'#2D4849', height:970, }}
+      <Sider style={{  backgroundColor:'#2D4849', height:865, }}
         breakpoint="lg"
         collapsedWidth="0"
         onBreakpoint={(broken) => {
@@ -122,7 +130,7 @@ const creatpost=async(e)=>{
             margin: '24px 16px 0',
             backgroundColor:'white',
           }}
-        > 
+        > <button onClick={handleclicks} className='uploadnewvideo'>Add Video and Pdf</button>
             <div className="upload" onSubmit={creatpost}>
            <form className='uploadform' action="">
             <label className='courselabel'>coursname</label>
@@ -131,6 +139,7 @@ const creatpost=async(e)=>{
               }
               value={courseName}
             placeholder='coursname'/></div>
+             
             <label className='catagorylabel' htmlFor="">Catagory</label>
             <div className='catagoryinput'> <Select style={{width:340}} defaultValue="" >
         <Option  value="1">catagory1</Option>
@@ -145,7 +154,7 @@ const creatpost=async(e)=>{
       </Select>
 
             <label className='catagorylabel' htmlFor="">Description</label>
-            <div className='courseinput'> <input  type="text" 
+            <div className='courseinputs'> <textarea  name="message" className='textarea'
               onChange={(e)=>setdescription(e.target.value)
               }
               value={description}
@@ -153,12 +162,13 @@ const creatpost=async(e)=>{
         
       
       <label className='catagorylabel' htmlFor="">Curriculum</label>
-      <div className='courseinput'> <input   type="text" 
+      <div className='courseinputs'> <textarea  name="message" className='textarea' 
               onChange={(e)=>setcurriculum(e.target.value)
               }
               value={curriculum}
             /></div>
-     
+     <label className='catagorylabel'>picture</label>
+             <div className='divfile'><input type="file" /></div>
      
             <button className="signinbtns" >upload</button>
             </form>

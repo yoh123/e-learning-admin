@@ -132,7 +132,7 @@ const Mycourses = () => {
             margin: '24px 16px 0',
             backgroundColor:'white',
           }}
-        > <button onClick={handleclicks}  style={{ marginLeft:1140,marginTop:10,borderRadius:15}}>Upload</button>
+        > <button onClick={handleclicks}  style={{ marginLeft:1090,marginTop:10,borderRadius:15,backgroundColor:'#FdB137',color:'white'}}>Add New Course</button>
             <Row>
              
                 <div 

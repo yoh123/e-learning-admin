@@ -1,18 +1,23 @@
 .signin{
     background-color: #F9F8F3;
+    border-radius: 15px;
 }
 .signinpassword{
     
-    border: 1px solid white;
-    background-color: white;
+   
     height: 50px;
+    
 }
 .signinemail{
     border: 1px solid white;
     background-color: white;
     height: 50px;
+    width: 290px;
+    margin-left: 5px;
+    border-radius: 8px;
     
 }
+
 .signinform{
     width: 300px;
     margin-left: 650px;
@@ -74,6 +79,14 @@
     margin-left: 5px;
     border-radius: 8px;
 }
+.textarea{
+   border: #E6F0f0;
+   border-radius: 8px;
+   height: 100px; 
+   background-color: white;
+   margin-left: 5px;
+   width: 340px;
+}
 .courselabel{
     margin-left: 5px;
     font-family: 'Courier New', Courier, monospace;
@@ -94,6 +107,18 @@
     font-size: larger;
     font-weight: bolder;
   
+}
+.signinlabelemail{
+    margin-left: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+}
+.signinlabelpas{
+    margin-left: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
 }
 .catagoryinput{
     width: 340px;
@@ -117,3 +142,101 @@
      font-weight: bolder;
      
 }
+
+
+
+.divvideo{
+background-color: #F9F8F3;
+border-radius: 8px;
+margin: 13px;
+
+}
+.divpdf{
+    background-color: #F9F8F3;
+    border-radius: 8px;
+    margin-left: 200px;
+    height: 382px;
+    margin-top: 10px;
+    
+    }
+.durinput{
+    width: 340px;
+    margin-left: 3px;
+    border: 1px solid #E6F0f0;
+    background-color: white;
+    border-radius: 10px;
+}
+.durinputs{
+    width: 380px;
+    margin-left: 3px;
+    border: 1px solid #E6F0f0;
+    background-color: white;
+    border-radius: 10px;
+}
+.labelvideoname{
+    margin-left: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 18px;
+}
+.labelduration{
+    margin-left: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 18px; 
+}
+.labelvideo{
+    margin-left: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 18px; 
+}
+.divfile{
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.uploadnewvideo{
+    float: right;
+    width: 200px;
+    height: 30px;
+    background-color: #FdB137;
+    color: #E6F0f0;
+    border-radius: 10px;
+    border: #E6F0f0;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.videopost{
+    background-color: #FdB137;
+    border: #F9F8F3;
+    width: 348px;
+     border-radius: 7px;
+     margin-top: 30px;
+     height: 40px;
+     color: white;
+     margin-left: 1px;
+     font-family: 'Courier New', Courier, monospace;
+     font-size: larger;
+     font-weight: bolder;
+}
+.pdfpost{
+    background-color: #FdB137;
+    border: #F9F8F3;
+    width: 387px;
+     border-radius: 7px;
+     margin-top: 120px;
+     height: 40px;
+     color: white;
+     margin-left: 1px;
+     font-family: 'Courier New', Courier, monospace;
+     font-size: larger;
+     font-weight: bolder;
+}
+
+
